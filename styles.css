@@ -33,6 +33,12 @@ body {
   width: 104px;
   transform: translate(-50%, -50%);
   animation: bounce 1.2s ease-in-out infinite;
+  cursor: pointer;
+}
+
+.drawer-bg.open + .arrow {
+  animation-play-state: paused;
+  opacity: 0.5;
 }
 
 @keyframes bounce {
