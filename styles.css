@@ -22,6 +22,7 @@ body {
 .drawer-bg.open {
   transform: translateZ(0) translateY(0) translateY(-20px) translateZ(100px);
   transform: translateY(-10px) translateZ(80px);
+  filter: drop-shadow(0 20px 20px rgba(0,0,0,0.3));
 }
 
 /* Arrow animation */
