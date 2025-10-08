@@ -1,0 +1,6 @@
+const drawer = document.getElementById('drawer');
+const arrow = document.getElementById('arrow');
+
+arrow.addEventListener('click', () => {
+  drawer.classList.toggle('open');
+});
