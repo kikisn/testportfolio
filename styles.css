@@ -34,7 +34,6 @@ body {
   width: 70px;
   transform: translate(-50%, -50%);
   animation: bounce 1.2s ease-in-out infinite;
-  cursor: pointer;
 }
 
 @keyframes bounce {
