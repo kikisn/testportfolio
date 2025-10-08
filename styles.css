@@ -1,4 +1,8 @@
 /* === GLOBAL === */
+* {
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -6,6 +10,7 @@ body {
   height: 100vh;
   background-color: #f2f2f2;
   margin: 0;
+  overflow-x: hidden;
 }
 
 /* === DRAWER FRONT PAGE === */
@@ -13,28 +18,34 @@ body {
   position: relative;
   display: inline-block;
   perspective: 800px;
+  width: 90vw; /* 🔹 responsive width */
+  max-width: 1600px; /* prevents excessive scaling on large screens */
 }
 
 .drawer-bg {
-  width: 1600px; /* or use max-width for responsive */
+  width: 100%;
+  height: auto;
   transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1);
   transform-origin: center;
   cursor: pointer;
 }
 
 .drawer-bg.open {
-  transform: translateY(-10px) translateZ(80px);
-  filter: drop-shadow(0 20px 20px rgba(0,0,0,0.3));
+  transform: translateY(-1%) translateZ(80px);
+  filter: drop-shadow(0 20px 20px rgba(0, 0, 0, 0.3));
 }
 
 .arrow {
   position: absolute;
   top: 56%;
   left: 50%;
-  width: 104px;
+  width: 6.5vw; /* 🔹 scales arrow with screen width */
+  max-width: 104px;
+  min-width: 50px;
   transform: translate(-50%, -50%);
   animation: bounce 1.2s ease-in-out infinite;
   cursor: pointer;
+  z-index: 10;
 }
 
 .drawer-bg.open + .arrow {
@@ -54,12 +65,14 @@ body {
 /* === FILE TABS PAGE === */
 .file-drawer {
   position: relative;
-  width: 800px; /* adjust to your image */
+  width: 90vw; /* 🔹 responsive */
+  max-width: 800px;
 }
 
 .files-bg {
   width: 100%;
   display: block;
+  height: auto;
 }
 
 .tab {
@@ -77,16 +90,18 @@ body {
   display: block;
 }
 
-#tab-about { top: 100px; animation-delay: 0.2s; }
-#tab-agency { top: 220px; animation-delay: 0.4s; }
-#tab-dog { top: 340px; animation-delay: 0.6s; }
-#tab-memories { top: 460px; animation-delay: 0.8s; }
+/* 🔹 Position tabs with percentages for flexibility */
+#tab-about { top: 13%; animation-delay: 0.2s; }
+#tab-agency { top: 33%; animation-delay: 0.4s; }
+#tab-dog { top: 53%; animation-delay: 0.6s; }
+#tab-memories { top: 73%; animation-delay: 0.8s; }
 
 .tab:hover {
-  transform: translateX(15px);
+  transform: translateX(3%); /* 🔹 scales hover pull with screen */
   filter: brightness(1.05);
 }
 
+/* Slide-in animation */
 @keyframes slideIn {
   0% {
     opacity: 0;
@@ -95,5 +110,51 @@ body {
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+/* === RESPONSIVE BREAKPOINTS === */
+
+/* Tablets (≤1024px) */
+@media (max-width: 1024px) {
+  .drawer-container {
+    width: 95vw;
+  }
+
+  .arrow {
+    width: 8vw;
+  }
+
+  #tab-about { top: 15%; }
+  #tab-agency { top: 35%; }
+  #tab-dog { top: 55%; }
+  #tab-memories { top: 75%; }
+}
+
+/* Phones (≤600px) */
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .drawer-container, .file-drawer {
+    width: 95vw;
+  }
+
+  .arrow {
+    width: 12vw;
+    min-width: 40px;
+  }
+
+  /* Smaller spacing for tabs */
+  #tab-about { top: 18%; }
+  #tab-agency { top: 40%; }
+  #tab-dog { top: 62%; }
+  #tab-memories { top: 84%; }
+
+  .tab:hover {
+    transform: translateX(5%);
   }
 }
