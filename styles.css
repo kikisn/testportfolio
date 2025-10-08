@@ -4,25 +4,35 @@ body {
   align-items: center;
   height: 100vh;
   background-color: #f2f2f2;
+  margin: 0;
 }
 
 .drawer-container {
   position: relative;
   display: inline-block;
+  perspective: 800px; /* adds 3D depth */
 }
 
 .drawer-bg {
-  display: block;
-  width: 600px; /* adjust to match your image size */
+  width: 600px; /* adjust to your image size */
+  transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1);
+  transform-origin: center;
 }
 
+.drawer-bg.open {
+  transform: translateZ(0) translateY(0) translateY(-20px) translateZ(100px);
+  transform: translateY(-10px) translateZ(80px);
+}
+
+/* Arrow animation */
 .arrow {
   position: absolute;
-  top: 50%; /* adjust until it sits correctly */
+  top: 50%;
   left: 50%;
+  width: 50px;
   transform: translate(-50%, -50%);
-  width: 50px; /* adjust size */
   animation: bounce 1.2s ease-in-out infinite;
+  cursor: pointer;
 }
 
 @keyframes bounce {
