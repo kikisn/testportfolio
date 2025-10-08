@@ -14,7 +14,7 @@ body {
 }
 
 .drawer-bg {
-  width: 600px; /* adjust to your image size */
+  width: 1080px; /* adjust to your image size */
   transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1);
   transform-origin: center;
 }
@@ -28,9 +28,9 @@ body {
 /* Arrow animation */
 .arrow {
   position: absolute;
-  top: 50%;
+  top: 56%;
   left: 50%;
-  width: 50px;
+  width: 70px;
   transform: translate(-50%, -50%);
   animation: bounce 1.2s ease-in-out infinite;
   cursor: pointer;
