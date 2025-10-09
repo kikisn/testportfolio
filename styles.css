@@ -100,11 +100,11 @@ body:has(.drawer-container) {
   display: block;
 }
 
-/* 🔹 Position tabs with percentages for flexibility */
-#tab-about { top: 13%; animation-delay: 0.2s; }
-#tab-agency { top: 33%; animation-delay: 0.4s; }
-#tab-dog { top: 53%; animation-delay: 0.6s; }
-#tab-memories { top: 73%; animation-delay: 0.8s; }
+/* Position tabs to overlap file folders properly */
+#tab-about { top: 8%; animation-delay: 0.2s; }
+#tab-agency { top: 25%; animation-delay: 0.4s; }
+#tab-dog { top: 42%; animation-delay: 0.6s; }
+#tab-memories { top: 59%; animation-delay: 0.8s; }
 
 .tab:hover {
   transform: translateX(3%); /* 🔹 scales hover pull with screen */
@@ -143,10 +143,10 @@ body:has(.drawer-container) {
     height: 100vh;
   }
 
-  #tab-about { top: 15%; }
-  #tab-agency { top: 35%; }
-  #tab-dog { top: 55%; }
-  #tab-memories { top: 75%; }
+  #tab-about { top: 10%; }
+  #tab-agency { top: 28%; }
+  #tab-dog { top: 46%; }
+  #tab-memories { top: 64%; }
 }
 
 /* Phones (≤600px) */
@@ -175,10 +175,10 @@ body:has(.drawer-container) {
   }
 
   /* Smaller spacing for tabs */
-  #tab-about { top: 18%; }
-  #tab-agency { top: 40%; }
-  #tab-dog { top: 62%; }
-  #tab-memories { top: 84%; }
+  #tab-about { top: 12%; }
+  #tab-agency { top: 32%; }
+  #tab-dog { top: 52%; }
+  #tab-memories { top: 72%; }
 
   .tab:hover {
     transform: translateX(5%);
