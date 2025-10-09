@@ -107,7 +107,7 @@ body:has(.drawer-container) {
 
 .tab {
   position: absolute;
-  left: 5%;
+  left: 9.8%;
   width: 20vw;
   transition: transform 0.3s ease, filter 0.3s ease;
   cursor: pointer;
@@ -122,10 +122,10 @@ body:has(.drawer-container) {
 }
 
 /* Position tabs to overlap file folders properly - percentage-based for responsive scaling */
-#tab-about { top: 16%; animation-delay: 0.2s; }
-#tab-agency { top: 33%; animation-delay: 0.4s; }
-#tab-dog { top: 50%; animation-delay: 0.6s; }
-#tab-memories { top: 67%; animation-delay: 0.8s; }
+#tab-about { top: 23.5%; animation-delay: 0.2s; }
+#tab-agency { top: 43.9%; animation-delay: 0.4s; }
+#tab-dog { top: 63.8%; animation-delay: 0.6s; }
+#tab-memories { top: 83.8%; animation-delay: 0.8s; }
 
 .tab:hover {
   transform: translateX(3%); /* 🔹 scales hover pull with screen */
@@ -207,10 +207,10 @@ body:has(.drawer-container) {
   }
 
   /* Maintain percentage-based positioning for tabs on tablets */
-  #tab-about { top: 16%; }
-  #tab-agency { top: 33%; }
-  #tab-dog { top: 50%; }
-  #tab-memories { top: 67%; }
+  #tab-about { top: 23.5%; }
+  #tab-agency { top: 43.9%; }
+  #tab-dog { top: 63.8%; }
+  #tab-memories { top: 83.8%; }
 }
 
 /* Phones (≤600px) */
@@ -255,10 +255,10 @@ body:has(.drawer-container) {
   }
 
   /* Adjusted positioning for mobile - percentage-based for responsive scaling */
-  #tab-about { top: 16%; }
-  #tab-agency { top: 33%; }
-  #tab-dog { top: 50%; }
-  #tab-memories { top: 67%; }
+  #tab-about { top: 23.5%; }
+  #tab-agency { top: 43.9%; }
+  #tab-dog { top: 63.8%; }
+  #tab-memories { top: 83.8%; }
 
   .arrow {
     width: 12vw;
