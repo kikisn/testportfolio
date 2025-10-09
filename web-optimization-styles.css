@@ -1,0 +1,340 @@
+/* === WEB OPTIMIZATION PAGE === */
+
+/* Reset body styling for this page */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+/* Main container - No resizing, PNGs use original dimensions */
+.optimization-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* === BACKGROUND === */
+.opt-bg-metal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* === TABS === */
+.opt-tab {
+  position: absolute;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.opt-tab-classified {
+  left: 7.81%;
+  top: 1.00%;
+  z-index: 2;
+}
+
+.opt-tab-dog {
+  left: 7.81%;
+  top: 25.11%;
+  z-index: 3;
+}
+
+.opt-tab-about-me {
+  left: 7.81%;
+  top: 48.78%;
+  z-index: 4;
+}
+
+.opt-tab-agency {
+  left: 6.28%;
+  top: 0.00%;
+  z-index: 5;
+}
+
+/* Tab hover animation - slide 2% to the left */
+.opt-tab:hover {
+  transform: translateX(-2%);
+  filter: brightness(1.15);
+}
+
+/* === PAPER BACKGROUND === */
+.opt-paper-bg {
+  position: absolute;
+  left: 10.31%;
+  top: 0.00%;
+  z-index: 6;
+}
+
+/* === PAGES === */
+.opt-page {
+  position: absolute;
+  z-index: 7;
+  transition: transform 0.4s ease;
+}
+
+.opt-right-page {
+  left: 54.38%;
+  top: 0.22%;
+  z-index: 7;
+  transform-origin: top left; /* Right page turns from left edge (binding) */
+}
+
+.opt-left-page {
+  left: 14.06%;
+  top: 0.78%;
+  z-index: 8;
+  transform-origin: top right; /* Left page turns from right edge (binding) */
+}
+
+/* === DEVICES === */
+.opt-device {
+  position: absolute;
+  z-index: 9;
+}
+
+.opt-tablet {
+  left: 20.56%;
+  top: 52.00%;
+  z-index: 9;
+}
+
+.opt-phone {
+  left: 17.75%;
+  top: 13.33%;
+  z-index: 10;
+}
+
+.opt-laptop {
+  left: 58.06%;
+  top: 6.67%;
+  z-index: 11;
+}
+
+/* === ARROWS === */
+.opt-arrow {
+  position: absolute;
+  cursor: pointer;
+  z-index: 12;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.opt-left-arrow {
+  left: 14.99%;
+  top: 89.22%;
+  z-index: 12;
+}
+
+.opt-right-arrow {
+  left: 87.75%;
+  top: 89.22%;
+  z-index: 13;
+}
+
+.opt-arrow:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* Page corner turning animation handled by JavaScript */
+
+/* === TEXT SECTIONS === */
+.opt-text {
+  position: absolute;
+  z-index: 14;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 200px;
+  font-family: 'Arial', sans-serif;
+  display: none; /* Hidden by default - uncomment to show */
+}
+
+.opt-text h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.opt-text p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #666;
+}
+
+.opt-text-1 {
+  left: 29.38%;
+  top: 6.67%;
+}
+
+.opt-text-2 {
+  left: 58.13%;
+  top: 48.33%;
+}
+
+.opt-text-3 {
+  left: 27.50%;
+  top: 90.00%;
+}
+
+.opt-text-4 {
+  left: 63.75%;
+  top: 90.00%;
+}
+
+/* === COLOR CIRCLES === */
+.opt-circles {
+  position: absolute;
+  display: none; /* Hidden by default - change to flex to show */
+  gap: 30px;
+  z-index: 15;
+  left: 65.00%;
+  top: 66.67%;
+}
+
+.opt-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.opt-circle-1 {
+  background-color: #FF6B6B;
+}
+
+.opt-circle-2 {
+  background-color: #4ECDC4;
+}
+
+.opt-circle-3 {
+  background-color: #FFE66D;
+}
+
+.opt-circle:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.opt-circle.active {
+  transform: scale(1.15);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+/* === PAGE CORNER TURNING EFFECT === */
+@keyframes pageFlip {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(-15deg);
+  }
+}
+
+@keyframes pageFlipRight {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(15deg);
+  }
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 1024px) {
+  .opt-text {
+    max-width: 150px;
+    padding: 10px 15px;
+  }
+  
+  .opt-text h3 {
+    font-size: 14px;
+  }
+  
+  .opt-text p {
+    font-size: 11px;
+  }
+  
+  .opt-circle {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .opt-circles {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .opt-text {
+    max-width: 120px;
+    padding: 8px 12px;
+  }
+  
+  .opt-text h3 {
+    font-size: 12px;
+  }
+  
+  .opt-text p {
+    font-size: 10px;
+  }
+  
+  .opt-circle {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .opt-circles {
+    gap: 15px;
+  }
+  
+  .opt-arrow {
+    width: 7%;
+  }
+}
+
+@media (max-width: 480px) {
+  .opt-text {
+    max-width: 100px;
+    padding: 6px 10px;
+  }
+  
+  .opt-text h3 {
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+  
+  .opt-text p {
+    font-size: 9px;
+  }
+  
+  .opt-circle {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .opt-circles {
+    gap: 12px;
+  }
+  
+  .opt-arrow {
+    width: 8%;
+  }
+}
+
