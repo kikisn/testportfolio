@@ -101,14 +101,14 @@ body:has(.drawer-container) {
 }
 
 /* Position tabs to overlap file folders properly */
-#tab-about { top: 8%; animation-delay: 0.2s; }
-#tab-agency { top: 25%; animation-delay: 0.4s; }
-#tab-dog { top: 42%; animation-delay: 0.6s; }
-#tab-memories { top: 59%; animation-delay: 0.8s; }
+#tab-about { top: 25%; animation-delay: 0.2s; }
+#tab-agency { top: 44%; animation-delay: 0.4s; }
+#tab-dog { top: 63%; animation-delay: 0.6s; }
+#tab-memories { top: 83%; animation-delay: 0.8s; }
 
 .tab:hover {
   transform: translateX(3%); /* 🔹 scales hover pull with screen */
-  filter: brightness(1.05);
+  filter: brightness(1.25);
 }
 
 /* Slide-in animation */
