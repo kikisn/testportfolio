@@ -78,10 +78,10 @@ body:has(.drawer-container) {
 
 .files-bg {
   width: 100%;
-  height: 100vh; /* Full viewport height */
+  height: auto; /* Full viewport height */
   display: block;
   object-fit: cover; /* Cover the entire viewport */
-  object-position: center center; /* Center the image */
+  object-position: top center; /* Center the image */
   position: relative;
   z-index: 1;
 }
@@ -92,8 +92,8 @@ body:has(.drawer-container) {
   top: 2%;
   left: 50%;
   transform: translateX(-50%);
-  width: 28vw;
-  max-width: 236px;
+  width: 12vw;
+  max-width: 180px;
   min-width: 100px;
   height: auto;
   z-index: 15;
@@ -107,7 +107,7 @@ body:has(.drawer-container) {
 
 .tab {
   position: absolute;
-  left: 5.0%;
+  left: 9.8%;
   width: 20vw;
   transition: transform 0.3s ease, filter 0.3s ease;
   cursor: pointer;
@@ -198,21 +198,12 @@ body:has(.drawer-container) {
   .files-bg {
     height: 100vh;
     object-fit: cover;
-    object-position: 7% center; /* Center on tablets */
+    object-position: top center; /* Center on tablets */
   }
 
   .logo {
-    width: 24vw;
-    max-width: 208px;
-  }
-
-  .tab {
-    width: 20vw; /* Make tabs bigger on mobile */
-    left: 12%; /* Move slightly away from edge */
-  }
-  
-  .tab img {
-    width: 20vw; /* Match tab container size */
+    width: 15vw;
+    max-width: 150px;
   }
 
   /* Maintain percentage-based positioning for tabs on tablets */
@@ -248,19 +239,19 @@ body:has(.drawer-container) {
   }
 
   .logo {
-    width: 41vw;
-    max-width: 160px;
+    width: 50vw;
+    max-width: 150px;
     top: 3%;
   }
 
   /* Mobile tab styling - bigger and better positioned */
   .tab {
     width: 30vw; /* Make tabs bigger on mobile */
-    left: 12%; /* Move slightly away from edge */
+    left: 2%; /* Move slightly away from edge */
   }
   
   .tab img {
-    width: 50vw; /* Match tab container size */
+    width: 30vw; /* Match tab container size */
   }
 
   /* Adjusted positioning for mobile - percentage-based for responsive scaling */
