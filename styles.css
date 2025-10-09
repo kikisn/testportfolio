@@ -86,8 +86,8 @@ body:has(.drawer-container) {
 
 .tab {
   position: absolute;
-  left: 0;
-  width: 100%;
+  left: 5%;
+  width: 20vw;
   transition: transform 0.3s ease, filter 0.3s ease;
   cursor: pointer;
   opacity: 0;
@@ -96,7 +96,7 @@ body:has(.drawer-container) {
 }
 
 .tab img {
-  width: 100%;
+  width: 20vw;
   display: block;
 }
 
