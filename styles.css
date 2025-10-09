@@ -121,11 +121,11 @@ body:has(.drawer-container) {
   display: block;
 }
 
-/* Position tabs to overlap file folders properly - adjusted for better alignment */
-#tab-about { top: 200px; animation-delay: 0.2s; }
-#tab-agency { top: 350px; animation-delay: 0.4s; }
-#tab-dog { top: 500px; animation-delay: 0.6s; }
-#tab-memories { top: 650px; animation-delay: 0.8s; }
+/* Position tabs to overlap file folders properly - more accurate alignment */
+#tab-about { top: 160px; animation-delay: 0.2s; }
+#tab-agency { top: 280px; animation-delay: 0.4s; }
+#tab-dog { top: 400px; animation-delay: 0.6s; }
+#tab-memories { top: 520px; animation-delay: 0.8s; }
 
 .tab:hover {
   transform: translateX(3%); /* 🔹 scales hover pull with screen */
@@ -206,10 +206,10 @@ body:has(.drawer-container) {
   }
 
   /* Maintain fixed positioning for tabs on tablets */
-  #tab-about { top: 200px; }
-  #tab-agency { top: 350px; }
-  #tab-dog { top: 500px; }
-  #tab-memories { top: 650px; }
+  #tab-about { top: 160px; }
+  #tab-agency { top: 280px; }
+  #tab-dog { top: 400px; }
+  #tab-memories { top: 520px; }
 }
 
 /* Phones (≤600px) */
@@ -230,10 +230,10 @@ body:has(.drawer-container) {
 
   .files-bg {
     height: auto;
-    width: 80%; /* Scale down the background */
-    max-width: 400px; /* Limit maximum size */
+    width: 100%; /* Full width on mobile */
+    max-width: none; /* Remove size limit */
     object-fit: contain;
-    object-position: 7%; /* Focus on leftmost portion on mobile */
+    object-position: left center; /* Focus on leftmost portion on mobile */
   }
 
   .logo {
@@ -252,11 +252,11 @@ body:has(.drawer-container) {
     width: 30vw; /* Match tab container size */
   }
 
-  /* Adjusted positioning for mobile scaled background */
-  #tab-about { top: 150px; }
-  #tab-agency { top: 250px; }
-  #tab-dog { top: 350px; }
-  #tab-memories { top: 450px; }
+  /* Adjusted positioning for mobile - align with actual folder tabs */
+  #tab-about { top: 120px; }
+  #tab-agency { top: 200px; }
+  #tab-dog { top: 280px; }
+  #tab-memories { top: 360px; }
 
   .arrow {
     width: 12vw;
