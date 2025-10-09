@@ -91,9 +91,9 @@ body:has(.drawer-container) {
   top: 2%;
   left: 50%;
   transform: translateX(-50%);
-  width: 8vw;
-  max-width: 120px;
-  min-width: 60px;
+  width: 12vw;
+  max-width: 180px;
+  min-width: 100px;
   height: auto;
   z-index: 15;
   cursor: pointer;
@@ -120,11 +120,11 @@ body:has(.drawer-container) {
   display: block;
 }
 
-/* Position tabs to overlap file folders properly - using fixed positioning */
-#tab-about { top: 180px; animation-delay: 0.2s; }
-#tab-agency { top: 320px; animation-delay: 0.4s; }
-#tab-dog { top: 460px; animation-delay: 0.6s; }
-#tab-memories { top: 600px; animation-delay: 0.8s; }
+/* Position tabs to overlap file folders properly - adjusted for better alignment */
+#tab-about { top: 200px; animation-delay: 0.2s; }
+#tab-agency { top: 350px; animation-delay: 0.4s; }
+#tab-dog { top: 500px; animation-delay: 0.6s; }
+#tab-memories { top: 650px; animation-delay: 0.8s; }
 
 .tab:hover {
   transform: translateX(3%); /* 🔹 scales hover pull with screen */
@@ -199,15 +199,15 @@ body:has(.drawer-container) {
   }
 
   .logo {
-    width: 10vw;
-    max-width: 100px;
+    width: 15vw;
+    max-width: 150px;
   }
 
   /* Maintain fixed positioning for tabs on tablets */
-  #tab-about { top: 180px; }
-  #tab-agency { top: 320px; }
-  #tab-dog { top: 460px; }
-  #tab-memories { top: 600px; }
+  #tab-about { top: 200px; }
+  #tab-agency { top: 350px; }
+  #tab-dog { top: 500px; }
+  #tab-memories { top: 650px; }
 }
 
 /* Phones (≤600px) */
@@ -228,20 +228,20 @@ body:has(.drawer-container) {
 
   .files-bg {
     height: 100vh;
-    object-position: top center; /* Always show top portion on mobile */
+    object-position: left center; /* Focus on leftmost portion on mobile */
   }
 
   .logo {
-    width: 12vw;
-    max-width: 80px;
+    width: 18vw;
+    max-width: 120px;
     top: 3%;
   }
 
   /* Maintain fixed positioning for tabs on mobile */
-  #tab-about { top: 180px; }
-  #tab-agency { top: 320px; }
-  #tab-dog { top: 460px; }
-  #tab-memories { top: 600px; }
+  #tab-about { top: 200px; }
+  #tab-agency { top: 350px; }
+  #tab-dog { top: 500px; }
+  #tab-memories { top: 650px; }
 
   .arrow {
     width: 12vw;
