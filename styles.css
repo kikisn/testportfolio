@@ -77,9 +77,10 @@ body:has(.drawer-container) {
 
 .files-bg {
   width: 100%;
-  height: 100vh; /* Full viewport height */
+  height: auto; /* Let image maintain aspect ratio */
+  min-height: 100vh; /* Ensure minimum height */
   display: block;
-  object-fit: cover; /* Ensure image covers full area */
+  object-fit: contain; /* Show full image without cropping */
   object-position: top center; /* Always show top portion of image */
   position: relative;
   z-index: 1;
@@ -194,7 +195,8 @@ body:has(.drawer-container) {
   }
 
   .files-bg {
-    height: 100vh;
+    height: auto;
+    object-fit: contain;
     object-position: top center; /* Ensure top portion visible */
   }
 
@@ -227,21 +229,34 @@ body:has(.drawer-container) {
   }
 
   .files-bg {
-    height: 100vh;
-    object-position: left center; /* Focus on leftmost portion on mobile */
+    height: auto;
+    width: 80%; /* Scale down the background */
+    max-width: 400px; /* Limit maximum size */
+    object-fit: contain;
+    object-position: 7%; /* Focus on leftmost portion on mobile */
   }
 
   .logo {
-    width: 18vw;
-    max-width: 120px;
+    width: 50vw;
+    max-width: 150px;
     top: 3%;
   }
 
-  /* Maintain fixed positioning for tabs on mobile */
-  #tab-about { top: 200px; }
-  #tab-agency { top: 350px; }
-  #tab-dog { top: 500px; }
-  #tab-memories { top: 650px; }
+  /* Mobile tab styling - bigger and better positioned */
+  .tab {
+    width: 30vw; /* Make tabs bigger on mobile */
+    left: 2%; /* Move slightly away from edge */
+  }
+  
+  .tab img {
+    width: 30vw; /* Match tab container size */
+  }
+
+  /* Adjusted positioning for mobile scaled background */
+  #tab-about { top: 150px; }
+  #tab-agency { top: 250px; }
+  #tab-dog { top: 350px; }
+  #tab-memories { top: 450px; }
 
   .arrow {
     width: 12vw;
