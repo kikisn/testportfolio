@@ -80,6 +80,7 @@ body:has(.drawer-container) {
   height: 100vh; /* Full viewport height */
   display: block;
   object-fit: cover; /* Ensure image covers full area */
+  object-position: top center; /* Always show top portion of image */
   position: relative;
   z-index: 1;
 }
@@ -119,11 +120,11 @@ body:has(.drawer-container) {
   display: block;
 }
 
-/* Position tabs to overlap file folders properly */
-#tab-about { top: 25%; animation-delay: 0.2s; }
-#tab-agency { top: 44%; animation-delay: 0.4s; }
-#tab-dog { top: 63%; animation-delay: 0.6s; }
-#tab-memories { top: 83%; animation-delay: 0.8s; }
+/* Position tabs to overlap file folders properly - using fixed positioning */
+#tab-about { top: 180px; animation-delay: 0.2s; }
+#tab-agency { top: 320px; animation-delay: 0.4s; }
+#tab-dog { top: 460px; animation-delay: 0.6s; }
+#tab-memories { top: 600px; animation-delay: 0.8s; }
 
 .tab:hover {
   transform: translateX(3%); /* 🔹 scales hover pull with screen */
@@ -194,6 +195,7 @@ body:has(.drawer-container) {
 
   .files-bg {
     height: 100vh;
+    object-position: top center; /* Ensure top portion visible */
   }
 
   .logo {
@@ -201,10 +203,11 @@ body:has(.drawer-container) {
     max-width: 100px;
   }
 
-  #tab-about { top: 10%; }
-  #tab-agency { top: 28%; }
-  #tab-dog { top: 46%; }
-  #tab-memories { top: 64%; }
+  /* Maintain fixed positioning for tabs on tablets */
+  #tab-about { top: 180px; }
+  #tab-agency { top: 320px; }
+  #tab-dog { top: 460px; }
+  #tab-memories { top: 600px; }
 }
 
 /* Phones (≤600px) */
@@ -225,6 +228,7 @@ body:has(.drawer-container) {
 
   .files-bg {
     height: 100vh;
+    object-position: top center; /* Always show top portion on mobile */
   }
 
   .logo {
@@ -233,16 +237,16 @@ body:has(.drawer-container) {
     top: 3%;
   }
 
+  /* Maintain fixed positioning for tabs on mobile */
+  #tab-about { top: 180px; }
+  #tab-agency { top: 320px; }
+  #tab-dog { top: 460px; }
+  #tab-memories { top: 600px; }
+
   .arrow {
     width: 12vw;
     min-width: 40px;
   }
-
-  /* Smaller spacing for tabs */
-  #tab-about { top: 12%; }
-  #tab-agency { top: 32%; }
-  #tab-dog { top: 52%; }
-  #tab-memories { top: 72%; }
 
   .tab:hover {
     transform: translateX(5%);
