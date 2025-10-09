@@ -107,7 +107,7 @@ body:has(.drawer-container) {
 
 .tab {
   position: absolute;
-  left: 8.0%;
+  left: 5.0%;
   width: 20vw;
   transition: transform 0.3s ease, filter 0.3s ease;
   cursor: pointer;
@@ -208,7 +208,7 @@ body:has(.drawer-container) {
 
   .tab {
     width: 40vw; /* Make tabs bigger on mobile */
-    left: 9.8%; /* Move slightly away from edge */
+    left: 12%; /* Move slightly away from edge */
   }
   
   .tab img {
@@ -256,7 +256,7 @@ body:has(.drawer-container) {
   /* Mobile tab styling - bigger and better positioned */
   .tab {
     width: 30vw; /* Make tabs bigger on mobile */
-    left: 9.8%; /* Move slightly away from edge */
+    left: 12%; /* Move slightly away from edge */
   }
   
   .tab img {
