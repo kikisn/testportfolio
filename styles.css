@@ -247,11 +247,11 @@ body:has(.drawer-container) {
   /* Mobile tab styling - bigger and better positioned */
   .tab {
     width: 30vw; /* Make tabs bigger on mobile */
-    left: 2%; /* Move slightly away from edge */
+    left: 9.8%; /* Move slightly away from edge */
   }
   
   .tab img {
-    width: 30vw; /* Match tab container size */
+    width: 70vw; /* Match tab container size */
   }
 
   /* Adjusted positioning for mobile - percentage-based for responsive scaling */
