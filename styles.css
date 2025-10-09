@@ -177,7 +177,6 @@ body:has(.drawer-container) {
     transform: translateX(-50%) rotate(-0.25deg);
   }
 }
-
 /* === RESPONSIVE BREAKPOINTS === */
 
 /* Tablets (≤1024px) */
@@ -192,18 +191,26 @@ body:has(.drawer-container) {
 
   .file-drawer {
     width: 100vw;
-    min-height: 100vh;
   }
 
   .files-bg {
     height: 100vh;
     object-fit: cover;
-    object-position: top center; /* Center on tablets */
+    object-position: 7% center; /* Center on tablets */
   }
 
   .logo {
-    width: 15vw;
-    max-width: 150px;
+    width: 24vw;
+    max-width: 208px;
+  }
+
+  .tab {
+    width: 20vw; /* Make tabs bigger on mobile */
+    left: 12%; /* Move slightly away from edge */
+  }
+  
+  .tab img {
+    width: 20vw; /* Match tab container size */
   }
 
   /* Maintain percentage-based positioning for tabs on tablets */
@@ -227,7 +234,6 @@ body:has(.drawer-container) {
 
   .file-drawer {
     width: 100vw;
-    min-height: 100vh; /* Ensure full viewport height */
   }
 
   .files-bg {
@@ -239,19 +245,19 @@ body:has(.drawer-container) {
   }
 
   .logo {
-    width: 50vw;
-    max-width: 150px;
+    width: 41vw;
+    max-width: 160px;
     top: 3%;
   }
 
   /* Mobile tab styling - bigger and better positioned */
   .tab {
     width: 30vw; /* Make tabs bigger on mobile */
-    left: 2%; /* Move slightly away from edge */
+    left: 12%; /* Move slightly away from edge */
   }
   
   .tab img {
-    width: 30vw; /* Match tab container size */
+    width: 50vw; /* Match tab container size */
   }
 
   /* Adjusted positioning for mobile - percentage-based for responsive scaling */
@@ -268,4 +274,3 @@ body:has(.drawer-container) {
   .tab:hover {
     transform: translateX(5%);
   }
-}
