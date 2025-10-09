@@ -4,13 +4,18 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+  overflow-x: hidden;
+}
+
+/* Specific styling for drawer front page */
+body:has(.drawer-container) {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f2f2f2;
-  margin: 0;
-  overflow-x: hidden;
 }
 
 /* === DRAWER FRONT PAGE === */
@@ -65,14 +70,18 @@ body {
 /* === FILE TABS PAGE === */
 .file-drawer {
   position: relative;
-  width: 90vw; /* 🔹 responsive */
-  max-width: 800px;
+  width: 100vw; /* Show full width */
+  max-width: none; /* Remove max-width constraint */
+  min-height: 100vh; /* Ensure full height */
 }
 
 .files-bg {
   width: 100%;
+  height: 100vh; /* Full viewport height */
   display: block;
-  height: auto;
+  object-fit: cover; /* Ensure image covers full area */
+  position: relative;
+  z-index: 1;
 }
 
 .tab {
@@ -83,6 +92,7 @@ body {
   cursor: pointer;
   opacity: 0;
   animation: slideIn 0.6s ease forwards;
+  z-index: 10;
 }
 
 .tab img {
@@ -125,6 +135,14 @@ body {
     width: 8vw;
   }
 
+  .file-drawer {
+    width: 100vw;
+  }
+
+  .files-bg {
+    height: 100vh;
+  }
+
   #tab-about { top: 15%; }
   #tab-agency { top: 35%; }
   #tab-dog { top: 55%; }
@@ -133,14 +151,22 @@ body {
 
 /* Phones (≤600px) */
 @media (max-width: 600px) {
-  body {
+  body:has(.drawer-container) {
     flex-direction: column;
     height: auto;
     padding: 20px 0;
   }
 
-  .drawer-container, .file-drawer {
+  .drawer-container {
     width: 95vw;
+  }
+
+  .file-drawer {
+    width: 100vw;
+  }
+
+  .files-bg {
+    height: 100vh;
   }
 
   .arrow {
