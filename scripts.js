@@ -21,5 +21,40 @@ function openDrawer() {
 }
 
 // ✅ Make both the arrow and drawer clickable
-arrow.addEventListener('click', openDrawer);
-drawer.addEventListener('click', openDrawer);
+if (drawer && arrow) {
+  arrow.addEventListener('click', openDrawer);
+  drawer.addEventListener('click', openDrawer);
+}
+
+// ✅ Tab navigation handlers
+const tabAgency = document.getElementById('tab-agency');
+const tabAbout = document.getElementById('tab-about');
+const tabDog = document.getElementById('tab-dog');
+const tabMemories = document.getElementById('tab-memories');
+
+if (tabAgency) {
+  tabAgency.addEventListener('click', () => {
+    window.location.href = "web-optimization.html";
+  });
+}
+
+if (tabAbout) {
+  tabAbout.addEventListener('click', () => {
+    // Add your about page link here
+    console.log('About tab clicked');
+  });
+}
+
+if (tabDog) {
+  tabDog.addEventListener('click', () => {
+    // Add your dog days page link here
+    console.log('Dog Days tab clicked');
+  });
+}
+
+if (tabMemories) {
+  tabMemories.addEventListener('click', () => {
+    // Add your memories page link here
+    console.log('Memories tab clicked');
+  });
+}
