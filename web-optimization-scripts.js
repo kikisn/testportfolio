@@ -54,14 +54,17 @@ const rightPage = document.querySelector('.opt-right-page');
 // Left arrow hover effects on left page
 if (leftArrow && leftPage) {
   leftArrow.addEventListener('mouseenter', () => {
-    // Left page turns from RIGHT edge (binding) - rotate negative to turn back/left
-    leftPage.style.transform = 'perspective(1500px) rotateY(-8deg)';
-    leftPage.style.boxShadow = '-15px 10px 30px rgba(0, 0, 0, 0.4)';
+    // Left page - subtle corner fold from RIGHT edge (binding)
+    // Small rotation to create natural corner lift effect
+    leftPage.style.transform = 'perspective(2500px) rotateY(-2deg) translateZ(5px)';
+    leftPage.style.boxShadow = '-8px 5px 15px rgba(0, 0, 0, 0.25)';
+    leftPage.style.filter = 'brightness(1.02)';
   });
   
   leftArrow.addEventListener('mouseleave', () => {
-    leftPage.style.transform = 'perspective(1500px) rotateY(0deg)';
+    leftPage.style.transform = 'perspective(2500px) rotateY(0deg) translateZ(0px)';
     leftPage.style.boxShadow = 'none';
+    leftPage.style.filter = 'brightness(1)';
   });
   
   // Optional: Add click functionality for navigation
@@ -74,14 +77,17 @@ if (leftArrow && leftPage) {
 // Right arrow hover effects on right page
 if (rightArrow && rightPage) {
   rightArrow.addEventListener('mouseenter', () => {
-    // Right page turns from LEFT edge (binding) - rotate positive to turn forward/right
-    rightPage.style.transform = 'perspective(1500px) rotateY(8deg)';
-    rightPage.style.boxShadow = '15px 10px 30px rgba(0, 0, 0, 0.4)';
+    // Right page - subtle corner fold from LEFT edge (binding)
+    // Small rotation to create natural corner lift effect
+    rightPage.style.transform = 'perspective(2500px) rotateY(2deg) translateZ(5px)';
+    rightPage.style.boxShadow = '8px 5px 15px rgba(0, 0, 0, 0.25)';
+    rightPage.style.filter = 'brightness(1.02)';
   });
   
   rightArrow.addEventListener('mouseleave', () => {
-    rightPage.style.transform = 'perspective(1500px) rotateY(0deg)';
+    rightPage.style.transform = 'perspective(2500px) rotateY(0deg) translateZ(0px)';
     rightPage.style.boxShadow = 'none';
+    rightPage.style.filter = 'brightness(1)';
   });
   
   // Optional: Add click functionality for navigation
