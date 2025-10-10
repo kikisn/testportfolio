@@ -82,7 +82,7 @@ body {
 }
 
 .opt-right-page {
-  left: 54.38%;
+  left: 47.38%;
   top: 0.22%;
   z-index: 7;
   transform-origin: top left; /* Right page turns from left edge (binding) */
