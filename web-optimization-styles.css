@@ -60,9 +60,9 @@ body {
   z-index: 5;
 }
 
-/* Tab hover animation - slide 2% to the left */
+/* Tab hover animation - slide 3px to the left */
 .opt-tab:hover {
-  transform: translateX(-2%);
+  transform: translateX(-3px);
   filter: brightness(1.15);
 }
 
