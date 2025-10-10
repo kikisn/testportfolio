@@ -103,7 +103,7 @@ body {
 
 .opt-tablet {
   left: 20.56%;
-  top: 52.00%;
+  top: 47.00%;
   z-index: 9;
 }
 
@@ -114,7 +114,7 @@ body {
 }
 
 .opt-laptop {
-  left: 58.06%;
+  left: 51.06%;
   top: 6.67%;
   z-index: 11;
 }
@@ -128,14 +128,14 @@ body {
 }
 
 .opt-left-arrow {
-  left: 14.99%;
-  top: 89.22%;
+  left: 16.99%;
+  top: 75.22%;
   z-index: 12;
 }
 
 .opt-right-arrow {
-  left: 87.75%;
-  top: 89.22%;
+  left: 72.75%;
+  top: 75.22%;
   z-index: 13;
 }
 
